@@ -9,6 +9,23 @@
 	<link rel="stylesheet" type="text/css" href="./css/layout.css">
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '3476111800399928001',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "http://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 	<script>
 		jQuery(document).ready(function( $ ) {
@@ -86,6 +103,14 @@
 
 </head>
 <body>
+
+    	<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-height="450"
+  data-show-faces="true">
+</div>
 	<div class="row">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4"><img src="./css/assets/logo1.png" class="header-logo"></img></div>
@@ -113,6 +138,7 @@
 	        <li><a href="#">Seller</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
+	      	
 	        <li><a href="#">Login</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
