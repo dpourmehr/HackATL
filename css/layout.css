@@ -46,4 +46,5 @@ li {
 	font-size: 20pt;
 	text-align: left;
 	font-weight: bolder;
+	cursor: pointer;
 }
