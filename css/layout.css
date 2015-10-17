@@ -33,6 +33,10 @@ li {
 	font-size: 15pt;
 }
 
+.list-group-item:hover {
+	background-color: #eb9605;
+}
+
 #list-group-title {
 	font-size: 20pt;
 	text-align: left;
