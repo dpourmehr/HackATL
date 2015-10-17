@@ -2,6 +2,9 @@
 <head>
 
 	<!-- Latest compiled and minified CSS -->
+	<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 	<script src="./lib/jquery-1.11.3.min.js"></script>
 	<script src="./lib/jquery.counterup.js"></script>
 	<script src="./lib/jquery.waypoints.min.js"></script>
@@ -13,7 +16,7 @@
 		jQuery(document).ready(function( $ ) {
 			$('counter').counterUp({
 				delay: 10, // the delay time in ms
-				time: 1000 // the speed time in ms
+				time: 750 // the speed time in ms
 			});
 		});
 	</script>
@@ -24,11 +27,11 @@
 
 	<div class="header">
 
-		<h1 style="font-family: titleFont;">Crazy stuff</h1>
+		<h1 style="font-family: titleFont;">Opallity</h1>
 
 
 	</div>
-	<nav class="navbar navbar-inverse navbar-fixed-top" style="margin-top: 200px;">
+	<nav class="navbar navbar-default navbar-fixed-top" style="margin-top: 200px;">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -56,11 +59,12 @@
 
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 	          <img src="./css/assets/currency.svg" style="margin-bottom: 5px; margin-right: 5px;" height="20px" width="20px">	
-	          	<counter style="color: white;" class=".numbers-with-commas">12,345.00</counter>
+	          	<counter style="color: black;" class=".numbers-with-commas">12,345.00</counter>
 	          	<span class="caret"></span>
 	          </a>
 
 	          <ul class="dropdown-menu">
+	          	<caption>Test</caption>
 	            <li><a href="#">Action</a></li>
 	            <li><a href="#">Another action</a></li>
 	            <li><a href="#">Something else here</a></li>
@@ -73,5 +77,12 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
+	<ul class="list-group" id="how-it-works">
+		<li class="list-group-item" id="list-group-title">How it works....</li>
+		<li class="list-group-item">1.		Sign up with Opallity and register your zipcode so we can offer you rewards closest to you.</li>
+		<li class="list-group-item">2.		Play games, and visit everyday in order to earn Opal Medallions.</li>
+		<li class="list-group-item">3.		Redeem Opal Medallions at the Opallity Marketplace.</li>
+		<li class="list-group-item">4.		Enjoy your products at a discounted price!</li>
+	</ul>
 </body>
 </html>

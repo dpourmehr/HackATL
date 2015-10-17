@@ -14,3 +14,27 @@ h1 {
 	color: white;
 	letter-spacing: 8px;
 }
+
+li {
+
+}
+
+#how-it-works {
+	margin-top: 100px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	text-align: left;
+}
+
+.list-group-item {
+	padding: 40px;
+	font-size: 15pt;
+}
+
+#list-group-title {
+	font-size: 20pt;
+	text-align: left;
+	font-weight: bolder;
+}
