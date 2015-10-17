@@ -65,9 +65,7 @@ li {
 }
 
 .header-logo {
-	width: 447px;
-	height:285px;
-	padding: 20px;
+	width: 100%;
 }
 
 #indicator-location {
