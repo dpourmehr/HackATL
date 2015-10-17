@@ -1,5 +1,9 @@
 body {
 	background-color: #8C001A;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 }
 
 @font-face {
@@ -33,7 +37,7 @@ li {
 	font-size: 15pt;
 }
 
-.list-group-item:hover {
+#list-item:hover {
 	background-color: #eb9605;
 }
 
