@@ -39,6 +39,7 @@ li {
 
 #list-item:hover {
 	background-color: #eb9605;
+	cursor: pointer;
 }
 
 #list-group-title {
