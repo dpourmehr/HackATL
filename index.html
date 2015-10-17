@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/layout.css">
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 	<script>
 		jQuery(document).ready(function( $ ) {
 			$('counter').counterUp({
@@ -16,18 +17,74 @@
 				time: 750 // the speed time in ms
 			});
 		});
-	</script>
-	<script type="text/javascript">
 
 		var map;
+		var infowindow;
+
 		function initMap() {
-		  map = new google.maps.Map(document.getElementById('map'), {
-		    center: {lat: -34.397, lng: 150.644},
-		    zoom: 8
+
+
+			var geocoder = new google.maps.Geocoder;
+			var lat = '';
+			var lng = '';
+			var address = document.getElementById('address').value;
+			geocoder.geocode({'address': address}, function(results, status) {
+				map.setCenter
+			});
+
+
+			map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 13,
+				center: {lat: -34.397, lng: 150.644}
+			});
+
+			document.getElementById('submit').addEventListener('click', function() {
+				geocodeAddress(geocoder, map);
+			})
+
+			infowindow = new google.maps.InfoWindow();
+		}
+
+		function geocodeAddress(geocoder, resultsMap) {
+		  	var address = document.getElementById('address').value;
+			geocoder.geocode({'address': address}, function(results, status) {
+				if (status === google.maps.GeocoderStatus.OK) {
+				  resultsMap.setCenter(results[0].geometry.location);
+				var service = new google.maps.places.PlacesService(map);
+				  service.nearbySearch({
+				    location: results[0].geometry.location,
+				    radius: 3000,
+				    types: ['restaurant']
+				  }, callback);
+
+				  resultsMap.setZoom(12);
+				} else {
+				  alert('Geocode was not successful for the following reason: ' + status);
+				}
+			});
+		}
+
+		function createMarker(place) {
+		  var placeLoc = place.geometry.location;
+		  var marker = new google.maps.Marker({
+		    map: map,
+		    position: place.geometry.location
+		  });
+
+		  google.maps.event.addListener(marker, 'click', function() {
+		    infowindow.setContent(place.name);
+		    infowindow.open(map, this);
 		  });
 		}
 
-    </script>
+		function callback(results, status) {
+		  if (status === google.maps.places.PlacesServiceStatus.OK) {
+		    for (var i = 0; i < results.length; i++) {
+		      createMarker(results[i]);
+		    }
+		  }
+		}
+	</script>
 
 
 </head>
@@ -94,11 +151,14 @@
 	</ul>
 
 	<ul class="list-group" id="how-it-works">
-		<li class="list-group-item" id="list-item">Search local Opallity partners...</li>
-		<li class="list-group-item"><div id="map"></div></li>
+		<li class="list-group-item" id="list-group-title">Search local Opallity partners...</li>
+		<li class="list-group-item"><div id="floating-panel">
+      <input id="address" type="textbox" value="Sydney, NSW">
+      <input id="submit" type="button" value="Search">
+    </div><div id="map"></div></li>
 	</ul>
-		<script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIvlOS2egDT-gGZjGvo7ufPL_0w6VJMi4&callback=initMap">
+	<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIvlOS2egDT-gGZjGvo7ufPL_0w6VJMi4&signed_in=true&libraries=places&callback=initMap">
     </script>
 </body>
 </html>
