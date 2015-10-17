@@ -21,6 +21,14 @@
 		var map;
 		var infowindow;
 
+$(function() {
+	if($(window).width() <= 310) {
+		$("img").each(function() {
+		$(this).attr("src", $(this).attr("src").replace("logo1", "logo2"));
+	});
+	}
+});
+
 		function initMap() {
 
 
@@ -89,7 +97,7 @@
 
 	<div class="header">
 
-		<h1 style="font-family: titleFont;">Opallity</h1>
+		<img src="./css/assets/logo1.png" class="header-logo"></img>
 
 
 	</div>

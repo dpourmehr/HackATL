@@ -1,5 +1,5 @@
 body {
-	background-color: #8C001A;
+	background-color: maroon;
 	user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -55,6 +55,17 @@ li {
 	margin-left: auto;
 	height: 100%;
 	width: 100%;
+}
+
+.header-logo {
+	width: 447px;
+	height:285px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header {
+	text-align: center;
 }
 
 #submit {}
