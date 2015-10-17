@@ -1,0 +1,16 @@
+body {
+	background-color: #8C001A;
+}
+
+@font-face {
+	font-family: titleFont;
+	src: url("./fonts/LeagueGothic-Regular.otf");
+}
+
+h1 {
+	font-size: 85pt;
+	line-height: 150px;
+	text-align: center;
+	color: white;
+	letter-spacing: 8px;
+}
