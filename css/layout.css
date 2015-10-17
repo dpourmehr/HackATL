@@ -60,12 +60,9 @@ li {
 .header-logo {
 	width: 447px;
 	height:285px;
-	margin-left: auto;
-	margin-right: auto;
+	padding: 20px;
 }
 
-.header {
-	text-align: center;
-}
+.header {}
 
 #submit {}

@@ -21,14 +21,6 @@
 		var map;
 		var infowindow;
 
-$(function() {
-	if($(window).width() <= 310) {
-		$("img").each(function() {
-		$(this).attr("src", $(this).attr("src").replace("logo1", "logo2"));
-	});
-	}
-});
-
 		function initMap() {
 
 
@@ -157,10 +149,13 @@ $(function() {
 
 	<ul class="list-group" id="how-it-works">
 		<li class="list-group-item" id="list-group-title">Search local Opallity partners...</li>
-		<li class="list-group-item"><div id="floating-panel">
-      <input id="address" type="textbox" value="Sydney, NSW">
-      <input id="submit" type="button" value="Search">
-    </div><div id="map"></div></li>
+		<li class="list-group-item">
+			<div id="floating-panel">
+      			<input id="address" type="textbox" value="Sydney, NSW">
+      			<input id="submit" type="button" value="Search">
+   			</div></li>
+
+   		<li><div id="map"></div></li>
 	</ul>
 	<script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIvlOS2egDT-gGZjGvo7ufPL_0w6VJMi4&signed_in=true&libraries=places&callback=initMap">
