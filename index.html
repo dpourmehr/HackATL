@@ -2,7 +2,6 @@
 <head>
 
 	<!-- Latest compiled and minified CSS -->
-
 	<script src="./lib/jquery-1.11.3.min.js"></script>
 	<script src="./lib/jquery.counterup.js"></script>
 	<script src="./lib/jquery.waypoints.min.js"></script>
@@ -18,6 +17,17 @@
 			});
 		});
 	</script>
+	<script type="text/javascript">
+
+		var map;
+		function initMap() {
+		  map = new google.maps.Map(document.getElementById('map'), {
+		    center: {lat: -34.397, lng: 150.644},
+		    zoom: 8
+		  });
+		}
+
+    </script>
 
 
 </head>
@@ -82,5 +92,13 @@
 		<li class="list-group-item" id="list-item">3.		Redeem Opal Medallions at the Opallity Marketplace.</li>
 		<li class="list-group-item" id="list-item">4.		Enjoy your products at a discounted price!</li>
 	</ul>
+
+	<ul class="list-group" id="how-it-works">
+		<li class="list-group-item" id="list-item">Search local Opallity partners...</li>
+		<li class="list-group-item"><div id="map"></div></li>
+	</ul>
+		<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIvlOS2egDT-gGZjGvo7ufPL_0w6VJMi4&callback=initMap">
+    </script>
 </body>
 </html>

@@ -48,3 +48,11 @@ li {
 	font-weight: bolder;
 	cursor: pointer;
 }
+
+#map {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	height: 80%;
+	width: 80%;
+}
