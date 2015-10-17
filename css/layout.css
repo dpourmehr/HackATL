@@ -23,6 +23,13 @@ li {
 
 }
 
+.item {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
 #how-it-works {
 	margin-top: 100px;
 	width: 70%;
@@ -61,6 +68,10 @@ li {
 	width: 447px;
 	height:285px;
 	padding: 20px;
+}
+
+#indicator-location {
+	margin-top: 20px;
 }
 
 .header {}
