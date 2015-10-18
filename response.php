@@ -13,10 +13,8 @@ if (mysqli_connect_errno()) {
 
 $sqlResult = mysqli_query("SELECT * FROM Players");
 $results = array();
-while($row = mysql_fetch_array($sqlResult)) {
-	$results[] = array(
-		'user' => $row['username']
-	);
+while($row = mysqli_fetch_assoc($sqlResult)) {
+	$results[] = $row;
 }
 echo json_encode($results);
 
