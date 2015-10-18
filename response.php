@@ -11,9 +11,9 @@ if (mysqli_connect_errno()) {
     exit();
 } else printf("connected");
 
-$sqlResult = mysqli_query("SELECT * FROM Players");
+$sqlResult = mysql_query("SELECT * FROM Players");
 $results = array();
-while($row = mysqli_fetch_assoc($sqlResult)) {
+while($row = mysql_fetch_assoc($sqlResult)) {
 	$results[] = $row;
 }
 echo json_encode($results);
