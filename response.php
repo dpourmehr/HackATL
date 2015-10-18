@@ -9,7 +9,7 @@ $mysqli = new mysqli($host,$user,$pwd,$db);
 
 if(isset($_POST['username']) && isset($_POST['password'])) {
 	$myArray = array();
-	if ($result = $mysqli->query("UPDATE Players SET opalls='0' WHERE username='rsmith'")) {
+	if ($result = $mysqli->query("DELETE FROM Players WHERE username = 'rsmith'")) {
 
 	}
 }
