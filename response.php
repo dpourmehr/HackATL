@@ -9,12 +9,8 @@ $mysqli = new mysqli($host,$user,$pwd,$db);
 
 if(isset($_POST['username']) && isset($_POST['password'])) {
 	$myArray = array();
-	if ($result = $mysqli->query("SELECT * FROM Players")) {
+	if ($result = $mysqli->query("UPDATE Players SET opalls='0' WHERE username='rsmith'")) {
 
-	    while($row = $result->fetch_array(MYSQL_ASSOC)) {
-	            $myArray[] = $row;
-	    }
-	    echo json_encode($myArray);
 	}
 }
 
