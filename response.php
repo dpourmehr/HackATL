@@ -9,8 +9,8 @@ $mysqli = new mysqli($host,$user,$pwd,$db);
 
 if(isset($_POST['username']) && isset($_POST['password'])) {
 	$myArray = array();
-	if ($result = $mysqli->query("Select * From Players") {
-		json_encode($result);
+	if ($result = $mysqli->query("ALTAR TABLE Players DROP COLUMN opalls") {
+		echo "yes";
 	}
 }
 
