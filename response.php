@@ -7,12 +7,12 @@ $db = "as_105e26c294c8255";
 
 $mysqli = new mysqli($host,$user,$pwd,$db);
 
-/*if(isset($_POST['username']) && isset($_POST['password'])) {
+if(isset($_POST['username']) && isset($_POST['password'])) {
 	$myArray = array();
-	if ($result = $mysqli->query("INSERT INTO Players (username, password, firstName, lastName, email, zipcode) VALUES ('rsmith', '1111', 'Robert', 'Smith', 'frogger287@gmail.com', '30096')") {
+	if ($result = $mysqli->query("INSERT INTO Players (username, password, opalls, firstName, lastName, email, zipcode) VALUES ('rsmith', '1111', '0', Robert', 'Smith', 'frogger287@gmail.com', '30096')") {
 
 	}
-}*/
+}
 
 $result = $mysqli->query("Select * From as_105e26c294c8255 where TABLE_NAME='Players'");
 echo json_encode($result);
