@@ -9,7 +9,7 @@ $conn = mysqli_connect($host, $user, $pwd, $db);
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
-}
+} else printf("connected");
 
 $sqlResult = mysqli_query("SELECT * FROM Players");
 $results = array();
