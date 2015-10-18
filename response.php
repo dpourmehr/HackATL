@@ -14,7 +14,7 @@ $mysqli = new mysqli($host,$user,$pwd,$db);
 	}
 }*/
 
-$result = $mysqli->query("Select * From Players");
+$result = $mysqli->query("Select * From as_105e26c294c8255 where TABLE_NAME='Players'");
 echo json_encode($result);
 
 
