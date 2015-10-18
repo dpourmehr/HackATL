@@ -102,15 +102,13 @@
 		function checkLogin() {
 			var user = document.getElementById("inputEmail").value;
 			var pass = document.getElementById("inputPassword").value;
-			console.log(user);
-			console.log(pass);
 			$.ajax({
 				type: "POST",
 				dataType: "json",
 				url: "response.php", //Relative or absolute path to response.php file
 				data: {'username': user, 'password': pass},
 				success: function(data) {
-					console.log(data);
+					console.log(data[0]);
 				}
 			});
 		}
