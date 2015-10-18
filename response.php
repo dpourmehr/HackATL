@@ -1,17 +1,14 @@
 <?php
+$servername = "tcp:ealybe55bg.database.windows.net,1433";
+$username = "opallity";
+$password = "Iltemp071993";
 
- 
-if(isset($_POST['username']) {
-	$dbhost = 'ealybe55bg.database.windows.net';
-	$dbuser = 'opallity';
-	$dbpass = 'Iltemp071993';
+// Create connection
+$conn = new mysqli($servername, $username, $password);
 
-	$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die                      ('Error connecting to mysql');
-
-	$dbname = 'OpallityFinal2';
-	mysql_select_db($dbname);
-
-	echo 'yes';
-}
-
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
 ?>
