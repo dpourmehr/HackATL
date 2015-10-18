@@ -9,10 +9,5 @@ $conn = mysqli_connect($host, $user, $pwd);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
-}
-
-if(isset($_POST['username'] && isset($_POST['password']))) {
-	echo mysqli_query($conn,"SELECT * FROM Persons");
-}
-
+} else echo 'connection worked';
 ?>
