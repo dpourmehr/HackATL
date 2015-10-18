@@ -9,8 +9,8 @@ $mysqli = new mysqli($host,$user,$pwd,$db);
 
 if(isset($_POST['username']) && isset($_POST['password'])) {
 	$myArray = array();
-	if ($result = $mysqli->query("INSERT INTO Players (username, password, firstName, lastName, email, zipcode) VALUES ('rsmith', '1111', 'Robert', 'Smith', 'frogger287@gmail.com', '30092')")) {
-		echo "yes";
+	if ($result = $mysqli->query("SELECT * FROM PLAYERS")) {
+		echo json_encode($result);
 	}
 }
 
