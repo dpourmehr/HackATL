@@ -1,14 +1,15 @@
 <?php
-$servername = "ealybe55bg.database.windows.net:1433";
-$username = "opallity";
-$password = "Iltemp071993";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
+ try
+    {
+        $serverName = "tcp:ealybe55bg.database.windows.net,1433";
+        $connectionOptions = array("Database"=>"OpallityFinal2",
+            "Uid"=>"opallity", "PWD"=>"Iltemp071993");
+        $conn = sqlsrv_connect($serverName, $connectionOptions);
+        if($conn == false)
+            die(FormatErrors(sqlsrv_errors()));
+    }
+    catch(Exception $e)
+    {
+        echo("Error!");
+    }
 ?>
