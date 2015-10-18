@@ -1,9 +1,9 @@
 <?php
 // DB connection info
-$host = "us-cdbr-azure-central-a.cloudapp.net";
-$user = "b2c629dc1ba64f";
-$pwd = "037a00b2";
-$db = "as_105e26c294c8255";
+$host = "ealybe55bg.database.windows.net,1433";
+$user = "opallity";
+$pwd = "Iltemp071993";
+$db = "OpallityFinal2";
 $conn = mysqli_connect($host, $user, $pwd);
 
 // Check connection
