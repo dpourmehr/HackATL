@@ -110,8 +110,9 @@
 				success: function(data) {
 				alert(data);
 				},
-				error: function(data) {
-					console.log("error: " + data.Message);
+				error: function(xhr, status, error) {
+					console.log("error: " + error);
+					console.log(xhr.responseText);
 				}
 			});
 		}
