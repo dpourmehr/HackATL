@@ -1,5 +1,5 @@
 <?php
-$servername = "ealybe55bg.database.windows.net";
+$servername = "ealybe55bg.database.windows.net,1433";
 $username = "opallity";
 $password = "Iltemp071993";
 
