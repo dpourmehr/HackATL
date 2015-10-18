@@ -1,10 +1,14 @@
 <?php
- $username = 'opallity';
-$password = 'Iltemp071993';
-$host = 'ealybe55bg.database.windows.net';
-$database = 'OpallityFinal2';
-$port = '1433'; 
+$servername = "ealybe55bg.database.windows.net,1433";
+$username = "opallity";
+$password = "Iltemp071993";
 
-$conn = mysql_connect($host.':'.$port, $username, $password);
-$db=mysql_select_db($database,$conn);
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
 ?>
