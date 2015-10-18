@@ -11,5 +11,9 @@ if ($mysqli->connect_errno) {
     exit();
 }
 
+if ($mysqli->query("CREATE TABLE Players ('username' varchar(255), 'password' varchar(255), 'firstName' varchar(255), 'lastName' varchar(255), 'email' varchar(255), 'zipcode' varchar(255))") === TRUE) {
+    printf("Table myCity successfully created.\n");
+}
+
 echo json_encode("yes");
 ?>
