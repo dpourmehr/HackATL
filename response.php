@@ -1,6 +1,6 @@
 <?php
 // DB connection info
-$host = "ealybe55bg.database.windows.net,1433";
+$host = "ealybe55bg.database.windows.net";
 $user = "opallity";
 $pwd = "Iltemp071993";
 $db = "OpallityFinal2";
