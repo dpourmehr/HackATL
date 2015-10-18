@@ -1,22 +1,14 @@
 <?php
 // DB connection info
-$host = "tcp:ealybe55bg.database.windows.net,1433";
-$user = "opallity";
-$pwd = "Iltemp071993";
-$db = "OpallityFinal2";
-try{
-    $conn = new PDO( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
-    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    $sql = "CREATE TABLE registration_tbl(
-    id INT NOT NULL IDENTITY(1,1) 
-    PRIMARY KEY(id),
-    name VARCHAR(30),
-    email VARCHAR(30),
-    date DATE)";
-    $conn->query($sql);
+$host = "us-cdbr-azure-central-a.cloudapp.net";
+$user = "b2c629dc1ba64f";
+$pwd = "037a00b2";
+$db = "as_105e26c294c8255";
+$conn = mysqli_connect($host, $user, $pwd);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
-catch(Exception $e){
-    die(print_r($e));
-}
-echo "<h3>Table created.</h3>";
+echo "Connected successfully";
 ?>
