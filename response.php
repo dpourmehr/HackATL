@@ -10,5 +10,6 @@ $conn = mysqli_connect($host, $user, $pwd);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+mysqli_query($conn,"SELECT * FROM Players");
 echo json_encode("yes");
 ?>
