@@ -1,15 +1,10 @@
 <?php
- try
-    {
-        $serverName = "tcp:ealybe55bg.database.windows.net,1433";
-        $connectionOptions = array("Database"=>"OpallityFinal2",
-            "Uid"=>"opallity", "PWD"=>"Iltemp071993");
-        $conn = sqlsrv_connect($serverName, $connectionOptions);
-        if($conn == false)
-            die(FormatErrors(sqlsrv_errors()));
-    }
-    catch(Exception $e)
-    {
-        echo("Error!");
-    }
+ $username = 'opallity';
+$password = 'Iltemp071993';
+$host = 'ealybe55bg.database.windows.net';
+$database = 'OpallityFinal2';
+$port = '1433'; 
+
+$conn = mysql_connect($host.':'.$port, $username, $password);
+$db=mysql_select_db($database,$conn);
 ?>
