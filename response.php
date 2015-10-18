@@ -9,7 +9,6 @@ $conn = mysqli_connect($host, $user, $pwd);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
-}
-
-echo 'yes';
+} else echo json_encode('you got it');
+echo json_encode('yes');
 ?>
