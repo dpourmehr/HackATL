@@ -14,7 +14,7 @@ if (mysqli_connect_errno()) {
 $sqlResult = mysqli_query("SELECT * FROM Players");
 $encode = array();
 while($row = mysqli_fetch_assoc($sqlResult)) {
-	$encode[$row['user']][] = $row['username'];
+	$encode[] = $row;
 }
 echo json_encode($encode);
 
