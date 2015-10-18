@@ -100,8 +100,8 @@
 		}
 
 		function checkLogin() {
-			var user = document.getElementById("inputEmail");
-			var pass = document.getElementById("inputPassword");
+			var user = document.getElementById("inputEmail").value;
+			var pass = document.getElementById("inputPassword").value;
 			$.ajax({
 				type: "POST",
 				dataType: "json",
