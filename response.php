@@ -12,7 +12,11 @@ if (mysqli_connect_errno()) {
 }
 
 $sqlResult = mysqli_query("SELECT * FROM Players");
-echo $sqlResult;
+$encode = array();
+while($row = mysqli_fetch_assoc($sqlResult)) {
+	$encode[$row['user']][] = $row['username'];
+}
+echo json_encode($encode);
 
 /*if ($conn->query("INSERT INTO Players (username, password, firstName, lastName, email, zipcode) VALUES ('rsmith', '1111', 'Robert', 'Smith', 'frogger287@gmail.com', '30092')") === TRUE) {
     echo json_encode("Rob was entered into the database correctly.");
