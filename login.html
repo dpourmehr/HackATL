@@ -98,6 +98,20 @@
 		    }
 		  }
 		}
+
+		function checkLogin() {
+			var user = document.getElementById("inputEmail");
+			var pass = document.getElementById("inputPassword");
+			$.ajax({
+				type: "POST",
+				dataType: "json",
+				url: "response.php", //Relative or absolute path to response.php file
+				data: {userName: user, },
+				success: function(data) {
+				
+				}
+			});
+		}
 	</script>
 
 
@@ -132,32 +146,23 @@
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	      	
-	        <li><a href="./login.html">Login</a></li>
+	        <li><a href="#">Login</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
 
-	<ul class="list-group" id="how-it-works">
-		<li class="list-group-item" id="list-group-title">How it works....</li>
-		<li class="list-group-item" id="list-item">1.		Sign up with Opallity and register your zipcode so we can offer you rewards closest to you.</li>
-		<li class="list-group-item" id="list-item">2.		Play games, and visit everyday in order to earn Opal Medallions.</li>
-		<li class="list-group-item" id="list-item">3.		Redeem Opal Medallions at the Opallity Marketplace.</li>
-		<li class="list-group-item" id="list-item">4.		Enjoy your products at a discounted price!</li>
-	</ul>
+	<div class="container">
 
-	<ul class="list-group" id="how-it-works">
-		<li class="list-group-item" id="list-group-title">Search local Opallity partners...</li>
-		<li class="list-group-item">
-			<div id="floating-panel">
-      			<input id="address" type="textbox" value="Sydney, NSW">
-      			<input id="submit" type="button" value="Search">
-   			</div></li>
+      <form class="form-signin" onsubmit="checkLogin();">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
 
-   		<li><div id="map"></div></li>
-	</ul>
-	<script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIvlOS2egDT-gGZjGvo7ufPL_0w6VJMi4&signed_in=true&libraries=places&callback=initMap">
-    </script>
+    </div>
 </body>
 </html>
