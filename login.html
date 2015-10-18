@@ -109,6 +109,7 @@
 				data: {'username': user, 'password': pass},
 				success: function(data) {
 					localStorage.setItem('username', data[0].username);
+					console.log('Local storage set user to: ' + data[0].username);
 				}
 			});
 		}
