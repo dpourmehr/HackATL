@@ -9,7 +9,7 @@ $mysqli = new mysqli($host,$user,$pwd,$db);
 
 if(isset($_POST['username']) && isset($_POST['password'])) {
 	$myArray = array();
-	if ($result = $mysqli->query("SELECT * FROM Players")) {
+	if ($result = $mysqli->query("SELECT * FROM Players") === TRUE) {
 		echo json_encode($result);
 	}
 }
