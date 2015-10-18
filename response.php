@@ -9,14 +9,10 @@ $conn = mysqli_connect($host, $user, $pwd, $db);
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
-} else printf("connected");
-
-$sqlResult = mysql_query("SELECT * FROM Players");
-$results = array();
-while($row = mysql_fetch_assoc($sqlResult)) {
-	$results[] = $row;
 }
-echo json_encode($results);
+
+$sqlResult = mysqli_query("SELECT * FROM Players");
+echo $sqlResult;
 
 /*if ($conn->query("INSERT INTO Players (username, password, firstName, lastName, email, zipcode) VALUES ('rsmith', '1111', 'Robert', 'Smith', 'frogger287@gmail.com', '30092')") === TRUE) {
     echo json_encode("Rob was entered into the database correctly.");
