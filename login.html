@@ -109,6 +109,9 @@
 				data: {userName: user, password: pass},
 				success: function(data) {
 				alert(data);
+				},
+				error: function(data) {
+					console.log(data);
 				}
 			});
 		}
