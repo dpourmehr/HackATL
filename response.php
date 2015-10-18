@@ -12,7 +12,7 @@ if (!$conn) {
 }
 
 if(isset($_POST['username'] && isset($_POST['password']))) {
-	echo mysqli_query($con,"SELECT * FROM Persons");
+	echo mysqli_query($conn,"SELECT * FROM Persons");
 }
 
 ?>
