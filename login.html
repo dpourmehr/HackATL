@@ -102,6 +102,8 @@
 		function checkLogin() {
 			var user = document.getElementById("inputEmail").value;
 			var pass = document.getElementById("inputPassword").value;
+			console.log(user);
+			console.log(pass);
 			$.ajax({
 				type: "POST",
 				dataType: "json",
@@ -110,9 +112,8 @@
 				success: function(data) {
 				alert(data);
 				},
-				error: function(xhr, status, error) {
-					console.log("error: " + error);
-					console.log(xhr.status);
+				error: function(data) {
+					console.log(data);
 				}
 			});
 		}
