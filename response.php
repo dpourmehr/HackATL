@@ -10,4 +10,6 @@ if ($mysqli->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
 }
+
+echo json_encode("yes");
 ?>
