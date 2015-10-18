@@ -14,6 +14,9 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 	}
 }
 
+$result = $mysqli->query("Select * From Players");
+echo json_encode($result);
+
 
 /*if ($conn->query("INSERT INTO Players (username, password, firstName, lastName, email, zipcode) VALUES ('rsmith', '1111', 'Robert', 'Smith', 'frogger287@gmail.com', '30092')") === TRUE) {
     echo json_encode("Rob was entered into the database correctly.");
