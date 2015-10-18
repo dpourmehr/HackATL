@@ -9,7 +9,7 @@ $mysqli = new mysqli($host,$user,$pwd,$db);
 
 if(isset($_POST['username']) && isset($_POST['password'])) {
 	$myArray = array();
-	if ($result = $mysqli->query("Select * From as_105e26c294c8255 where TABLE_NAME='Players'") {
+	if ($result = $mysqli->query("Select * From Players") {
 
 	}
 }
