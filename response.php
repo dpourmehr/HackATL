@@ -11,12 +11,14 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-if ($result = mysqli_query($conn, "SELECT Name FROM Players")) {
-    printf("Select returned %d rows.\n", mysqli_num_rows($result));
-
-    /* free result set */
-    mysqli_free_result($result);
+$sqlResult = mysqli_query("SELECT * FROM Players");
+$results = array();
+while($row = mysql_fetch_array($sqlResult)) {
+	$results[] = array(
+		'user' => $row['username']
+	);
 }
+echo json_encode($results);
 
 /*if ($conn->query("INSERT INTO Players (username, password, firstName, lastName, email, zipcode) VALUES ('rsmith', '1111', 'Robert', 'Smith', 'frogger287@gmail.com', '30092')") === TRUE) {
     echo json_encode("Rob was entered into the database correctly.");
