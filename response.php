@@ -11,8 +11,8 @@ if ($conn->connect_errno) {
     exit();
 }
 
-if ($conn->query("CREATE TABLE Players (username varchar(255), password varchar(255), firstName varchar(255), lastName varchar(255), email varchar(255), zipcode varchar(255))") === TRUE) {
-    echo json_encode("Table myCity successfully created.");
+if ($conn->query("INSERT INTO Players ('rsmith', '1111', 'Robert', 'Smith', 'frogger287@gmail.com', '30092')") === true) {
+    echo json_encode("Rob was entered into the database correctly.");
 }
 
 ?>
